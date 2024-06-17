@@ -8,6 +8,6 @@
   },
   "scripts": {
     "start": "node ./src/Server.js",
-    "dev": "nodemon ./src/Server.js --ignore sessions"
+    "dev": "nodemon ./src/index.js --ignore sessions"
   }
 }

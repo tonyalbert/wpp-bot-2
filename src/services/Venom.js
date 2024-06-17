@@ -17,7 +17,8 @@ const init = async () => {
 
 const sendText = async (to, text) => {
   try {
-    await client.sendText(to, text);
+    const res = await client.sendText(to, text);
+    console.log(res);
     return true
   } catch (error) {
     console.log(error);
@@ -25,9 +26,10 @@ const sendText = async (to, text) => {
   }
 }
 
-const sendFile = async (to, filePath) => {
+const sendFileFromBase64 = async (to, imgBase64, fileName, caption) => {
   try {
-    await client.sendFile(to, filePath);
+    const res = await client.sendFileFromBase64(to, imgBase64, fileName, caption);
+    console.log(res);
     return true
   } catch (error) {
     console.log(error);
@@ -35,4 +37,4 @@ const sendFile = async (to, filePath) => {
   }
 }
 
-module.exports = { init, sendText, client };  ;
+module.exports = { init, sendText, client, sendFileFromBase64 };  ;
