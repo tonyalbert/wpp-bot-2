@@ -7,7 +7,7 @@
     "venom-bot": "^5.1.0"
   },
   "scripts": {
-    "start": "node ./src/Server.js",
+    "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js --ignore sessions"
   }
 }
